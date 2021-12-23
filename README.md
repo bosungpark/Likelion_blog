@@ -18,32 +18,36 @@
 
 ## 설치 방법
 
-OS X & 리눅스:
+IDE는 VS Code를 기준으로 합니다.
 
-```sh
-npm install my-crazy-module --save
-```
+깃에서 초기 파일을 내려 받는 방법 (VS code에서 빈 폴더 생성 후)
+'''
+$ git clone h
+'''
 
-윈도우:
+가상환경 생성하기 및 켜기
+'''
+$ cd django
+$ python3 -m venv myvenv
+$ source myvenv/bin/activate      //Mac
+$ source myvenv/scripts/activate  // Windows
+'''
 
-```sh
-edit autoexec.bat
+확인 및 실행
+$ cd django/modelprojest
+$ python manage.py runserver
 ```
 
 ## 사용 예제
 
-스크린 샷과 코드 예제를 통해 사용 방법을 자세히 설명합니다.
+1.자유롭게 글을 쓰고 삭제 및 수정을 할 수 있다.
+2.원하는 게시물을 검색할 수 있다.
+3.로그인 및 회원가입 기능을 이용할 수 있다.
 
-_더 많은 예제와 사용법은 [Wiki][wiki]를 참고하세요._
 
 ## 개발 환경 설정
 
-모든 개발 의존성 설치 방법과 자동 테스트 슈트 실행 방법을 운영체제 별로 작성합니다.
-
-```sh
-make install
-npm test
-```
+환경설정을 할 필요 없음
 
 ## 업데이트 내역
 
