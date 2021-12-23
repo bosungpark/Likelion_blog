@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+  {% block content %}
+  <body>
+    <h1>{{blog.title}}</h1>
+    <div>
+      작성자: {{blog.writer}}
+      <br />
+      날짜: {{blog.pub_date}}
+    </div>
+    <hr />
+    <p>{{blog.body}}</p>
+    {% if blog.image %}
+      <p><img src="{{blog.image.url}}" alt="/"></p>
+    {% endif %}
+   
+    <!-- 코멘트부분 -->
+    {% if comment %}
+      <span>{{ comment.content }}</span>
+      <span>
+      - {{ comment.writer }}, {{ comment.create_date }}
+    {% endif %}
+    </span>
+    <div>
+      <a href="{% url 'blog:comment_create' blog.id %}"><small>댓글추가</small></a>
+    </div>
+
+
+    <h4><a href="{% url 'home' %}">홈으로</a></h4>
+    {% if user.is_authenticated %}
+    <h4><a href="{% url 'blog:update' blog.id %}">수정하기</a></h4>
+    <h4><a href="{% url 'blog:delete' blog.id%}">삭제하기</a></h4>
+    {% endif %}
+  </body>
+  {% endblock %}

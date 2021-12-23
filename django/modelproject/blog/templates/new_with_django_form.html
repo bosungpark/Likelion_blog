@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>CREATE_YOUR_NEW_POST_HERE!!</h1>
+
+<form action="{% url 'blog:create_with_django_form' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+</form>
+{% endblock %}

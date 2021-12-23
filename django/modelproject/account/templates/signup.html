@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div style="text-align: left;">
+    <h1 style="margin-bottom: 50px;">회원가입 페이지</h1>
+    <form action="{% url 'account:signup' %}" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit"  style="margin-top: 30px;">회원가입</button>
+    </form>
+</div>
+
+{% endblock %}

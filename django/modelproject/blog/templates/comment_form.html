@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>댓글등록하기</h3>
+<div>
+    <form action="{% url 'blog:comment_create' %}" method="POST">
+        {% csrf_token %}
+        <label for="content">댓글내용</label>
+            {{form.as_p}}
+        <button type="submit">저장하기</button>
+    </form>
+</div>
+{% endblock %}
