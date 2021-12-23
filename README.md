@@ -23,7 +23,7 @@ IDE는 VS Code를 기준으로 합니다.
 깃에서 초기 파일을 내려 받는 방법 (VS code에서 빈 폴더 생성 후)
 
 ```
-$ git clone h
+$ git clone https://github.com/bosungpark/Likelion_blog.git
 ```
 
 가상환경 생성하기 및 켜기
