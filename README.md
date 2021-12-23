@@ -22,22 +22,22 @@ IDE는 VS Code를 기준으로 합니다.
 
 깃에서 초기 파일을 내려 받는 방법 (VS code에서 빈 폴더 생성 후)
 
-'''sh
+```
 $ git clone h
-'''
+```
 
 가상환경 생성하기 및 켜기
 
-'''
+```
 $ cd django
 $ python3 -m venv myvenv
 $ source myvenv/bin/activate      //Mac
 $ source myvenv/scripts/activate  // Windows
-'''
+```
 
 확인 및 실행
 
-'''
+```
 $ cd django/modelprojest
 $ python manage.py runserver
 ```
@@ -51,7 +51,7 @@ $ python manage.py runserver
 
 ## 개발 환경 설정
 
-환경설정을 할 필요 없음
+별도의 환경설정을 할 필요 없음
 
 ## 업데이트 내역
 
@@ -69,4 +69,4 @@ $ python manage.py runserver
 2. (`git checkout -b feature/fooBar`) 명령어로 새 브랜치를 만드세요.
 3. (`git commit -am 'Add some fooBar'`) 명령어로 커밋하세요.
 4. (`git push origin feature/fooBar`) 명령어로 브랜치에 푸시하세요. 
-5. 풀리퀘스트를 보내주세요.
+5. 풀 리퀘스트를 보내주세요.
